@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------------------------
+Open the file in read mode
+--------------------------------------------------------------------------------------------------------
+	with open('Python.txt', 'r') as file:
+    		content = file.read()
+    		r_content = content[::-1] 
+    		print(r_content)
+--------------------------------------------------------------------------------------------------------
+Read Python.txt file and Print total number of lines and words in it.
+--------------------------------------------------------------------------------------------------------
+	with open('Python.txt', 'r') as file:
+    		lines = file.readlines()
+    		nline = len(lines)
+   	 	words = content.split()
+    		nword = len(words)
+    
+    	print(f"Total number of lines: {nline}")
+   	print(f"Total number of words: {nword}")
+--------------------------------------------------------------------------------------------------------
+Read Python.txt file and Print unique word with its count.
+--------------------------------------------------------------------------------------------------------
+	with open('D:\COLLAGE\SEM 3\22bca45\PYTHON\week 6\python txt\Python.txt', 'r') as file:
+    		content = file.read()
+    		words = content.split()
+    		wcount = {}
+    
+    	for word in words:
+        	wcount[word] = wcount.get(word, 0) + 1
+    
+    	for word, count in wcount.items():
+        	print(f"{word}: {count}")
+--------------------------------------------------------------------------------------------------------
+Read Python.txt file and Print largest and smallest word from it.
+--------------------------------------------------------------------------------------------------------
+	with open('Python.txt', 'r') as file:
+    		content = file.read()
+    		words = content.split()
+    
+    	if words:
+        	smallword = min(words, key=len)
+        	largword = max(words, key=len)
+        	print(f"Smallest word: {smallword}")
+        	print(f"Largest word: {largword}")
+    	else:
+        	print("No words found in the file.")
+--------------------------------------------------------------------------------------------------------
+Read Python.txt file. Convert it into upper case and write into another file "Python_Upper.txt"
+--------------------------------------------------------------------------------------------------------
+	with open('Python.txt', 'r') as infile, open('Python_Upper.txt', 'w') as output_file:
+    		content = infile.read()
+    		upcontent = content.upper()
+    		output_file.write(upcontent)
+    
+	print("File 'Python.txt' converted to upper case and saved as 'Python_Upper.txt'.")
+
+
